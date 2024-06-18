@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'Quicksand';
+    src:  url('../font/Quicksand-Medium.ttf');
+}
+
+* {
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* overflow: hidden;
+    height: 100%;
+    width: 100%; */
+    font-family: 'Quicksand';
+}
+
+header {
+    border-bottom: 1px solid #E4E4E4;
+    height: 11vh;
+    width: 100%;
+}
+
+section {
+    height: calc(100vh - 11vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    padding: 1vh;
+}
+
+footer {
+    height: 50px;
+    background: #F5FBFE;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
+.tab_link {
+    color: var(--092938, #092938);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+}
+.sticky-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+}
+.btn-custom {
+    margin-top: 1rem ; width: 100%;
+    border-radius: 12px;
+    background: var(--ff-3140, #FF3140);
+    border: none;
+    height: 2rem;
+    color: var(--White, #FFF);
+    text-overflow: ellipsis;
+}
+.layout_login ul li {
+    width: 19rem;
+    border-bottom: 2px solid var(--092938, #092938);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-item {
+    border-bottom:  2px solid var(--092938, #FF3140) !important;
+    opacity: 100 !important;
+
+}
+.layout_login ul li a {
+    text-decoration: none;
+}
+.nav-tabs .nav-item .nav-link.active {
+    background-color: rebeccapurple;
+    color: #092938;
+    border-color: #092938;
+    font-weight: bold;
+}
+
+.sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.menu_khoang {
+    gap: 2rem;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px; /* Use vh for responsiveness */
+    transition: .5s;
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+.login-button {
+    display: flex;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 99px;
+    background: var(--gradient, linear-gradient(90deg, #FF3140 0%, #FF3140 100%));
+    color: var(--white, #FFF);
+    font-size: 2vh; /* Use vh for responsiveness */
+}
+
+#navbarCollapse {
+    border-top: none;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: flex;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+.layout_login {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.layout {
+    background: url(../img/bg.png) 0px -53.146px / 100% 106.984% no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 6vh; /* Use vh for responsiveness */
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.layout h1 {
+    color: var(--092938, #092938);
+    font-size: 4.8vh; /* Use vh for responsiveness */
+    font-weight: 700;
+    line-height: 6.4vh; /* Use vh for responsiveness */
+}
+
+.layout h1 span {
+    color: var(--ff-3140, #FF3140);
+}
+
+.layout .cotentToken {
+    color: var(--092938, #092938);
+    font-size: 2vh; /* Use vh for responsiveness */
+    font-weight: 600;
+    line-height: 3.4vh; /* Use vh for responsiveness */
+}
+
+.pageHome {
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+    width: 55%;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2vh; /* Use vh for responsiveness */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border: 1px solid rgba(9, 41, 56, 0.10);
+    background: var(--Color-100, #F2F4F5);
+    padding: 2vh; /* Use vh for responsiveness */
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 1vh; /* Use vh for responsiveness */
+    width: 10vw; /* Use vw for responsiveness */
+}
+
+.time-number {
+    font-size: 4vh; /* Use vh for responsiveness */
+    font-weight: bold;
+    color: var(--ff-3140, #FF3140);
+}
+
+.time-unit {
+    font-size: 1.6vh; /* Use vh for responsiveness */
+    color: #666;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 3vw; /* Use vw for responsiveness */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.usdt-logo {
+    width: 2.4vh; /* Use vh for responsiveness */
+    height: 2.4vh; /* Use vh for responsiveness */
+    margin-right: 0.8vh; /* Use vh for responsiveness */
+}
+
+.price, .current-price {
+    color: red;
+    font-weight: bold;
+}
+
+.form_play {
+    width: 100%;
+    padding: 1vh; /* Use vh for responsiveness */
+    margin-top: 2vh; /* Use vh for responsiveness */
+}
+
+.form_play label {
+    color: var(--Color-200, #7C9AA8);
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 500;
+    line-height: 2.4vh; /* Use vh for responsiveness */
+}
+
+.usdt_span {
+    color: #092938;
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 700;
+}
+
+.listing_price {
+    color: var(--092938, #092938);
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 500;
+}
+
+.purch_button {
+    width: 100%;
+    padding: 1vh; /* Use vh for responsiveness */
+    border-radius: 16px;
+    background: var(--092938, #092938);
+    color: var(--White, #FFF);
+    font-size: 1.8vh; /* Use vh for responsiveness */
+}
+
+.program_button {
+    border-radius: 16px;
+    border: 1px solid rgba(9, 41, 56, 0.10);
+    background: #FFF;
+    width: 100%;
+    padding: 1vh; /* Use vh for responsiveness */
+    color: var(--092938, #092938);
+    font-size: 1.8vh; /* Use vh for responsiveness */
+    font-weight: 700;
+}
+
+.img_yahoo {
+    width: 32%; /* Adjust as needed */
+}
+
+.img_abum {
+    display: flex; /* Thêm thuộc tính này để đảm bảo hình ảnh nằm ngang */
+    flex-direction: row;
+    margin-top: 1vh; /* Use vh for responsiveness */
+    width: 29%; /* Adjust as needed */
+}
+
+.logo_footer {
+    width: 15%; /* Adjust as needed */
+}
+
+.footer_controller {
+    margin-top: 1vh; /* Use vh for responsiveness */
+}
+@media (max-width: 1619px) {
+    .pageHome {
+        width: 60%;
+    }
+}
+@media (max-width: 1268px) {
+    .pageHome {
+        width: 70%;
+    }
+}
+/* Media Queries for further responsiveness */
+@media (max-width: 768px) {
+
+html, body {
+    /* overflow: hidden; */
+    /* height: 100%;
+    width: 100%; */
+    font-family: 'Quicksand';
+}
+section {
+    /* height: calc(100vh - 11vh - 50px); Trừ đi chiều cao của header và footer */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* -webkit-overflow-scrolling: touch; */
+    flex-direction: column;
+    padding: 1vh;
+}
+    .layout h1 {
+        font-size: 23px;
+        line-height: 5.4vh;
+    }
+
+    .pageHome {
+        max-width: 90vw;
+        width: 21rem;
+    }
+
+    .time-box {
+        width: 15vw;
+    }
+    .layout .cotentToken {
+        color: var(--092938, #092938);
+        font-size: 2vh;
+        font-weight: 600;
+        line-height: 3.4vh;
+        text-align: center;
+    }
+
+    .info-row {
+        flex-direction: column;
+        padding: 0;
+    }
+}
