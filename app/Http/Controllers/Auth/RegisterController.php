@@ -79,7 +79,6 @@ class RegisterController extends Controller
         }
 
         $user = $this->create($data);
-
         $this->guard()->login($user);
 
         return redirect($this->redirectPath());

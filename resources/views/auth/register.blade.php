@@ -14,13 +14,14 @@
        <div class="tab-content" style="margin-top: 1rem; width: 100%;">
            <div>
             <ul style="color: red; list-style-type: none;font-size: 1rem;font-style: italic;opacity: 100%;border: none;">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
+                @if ($errors->has('ref'))
+                <li>{{ $errors->first('ref') }}</li>
+            @endif
             </ul>
                <form method="POST" action="{{ route('register') }}">
                    @csrf
                    <div class="row mb-3">
+                    <input type="hidden" name="ref" value="{{ request()->query('ref') }}">
 
                        <div class="col-md-12">
                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Name" required autocomplete="name" autofocus>
