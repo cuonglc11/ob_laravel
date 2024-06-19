@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/verify',[App\Http\Controllers\Auth\VerificationController::class ,'verify'])->name('verify');
+Route::get('/verify',[App\Http\Controllers\Auth\VerificationController::class ,'show'])->name('verify');
+
+

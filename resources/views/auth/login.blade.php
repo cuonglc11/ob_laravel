@@ -12,6 +12,11 @@
             </li>
 
         </ul>
+        @if (session('success'))
+    <div style="color: green;">
+        {{ session('success') }}
+    </div>
+@endif
         <div class="tab-content" id="myTabContent" style="margin-top: 1rem; width: 100%;">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <form method="POST" action="{{ route('login') }}">

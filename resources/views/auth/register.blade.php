@@ -15,7 +15,7 @@
            <div>
             <ul style="color: red; list-style-type: none;font-size: 1rem;font-style: italic;opacity: 100%;border: none;">
                 @if ($errors->has('ref'))
-                <li>{{ $errors->first('ref') }}</li>
+                <li style="opacity: 100%;border: none;font-style: oblique;font-weight: 200;">{{ $errors->first('ref') }}</li>
             @endif
             </ul>
                <form method="POST" action="{{ route('register') }}">
