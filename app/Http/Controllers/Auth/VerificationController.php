@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMail;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+
 class VerificationController extends Controller
 {
     /*
@@ -46,13 +49,12 @@ class VerificationController extends Controller
     public function verify(Request $request)
     {
         $user = Auth::user();
-
+        $mailable  = new SendMail();
         if ($user->markEmailAsVerified()) {
-            // event(new Verified($user));
-            // dd($user);
             $user->status = 1;
             $user->email_verifed = $user->email;
             $user->save();
+            Mail::to($user->email)->send($mailable);
         }
 
         return redirect($this->redirectPath())->with('verified', true);
